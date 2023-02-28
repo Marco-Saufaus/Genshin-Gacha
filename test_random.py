@@ -2,6 +2,11 @@ import pygame as pg
 import random
 from settings import *
 
+# Rarity Backgrounds
+rarity_5_bg = pg.image.load("resources/Background/orange.png")
+rarity_4_bg = pg.image.load("resources/Background/purple.png")
+rarity_3_bg = pg.image.load("resources/Background/blue.png")
+
 # Characters
 
 # 4-Star
@@ -61,10 +66,13 @@ coordinates = [(100, 68), (390, 68), (680, 68), (970, 68), (1260, 68)]
 for index, pull in enumerate(pulls):
    # for i in coordinates:
     if pull == "five star":
+        screen.blit(rarity_5_bg, coordinates[index])
         screen.blit(random.choice(five_star), coordinates[index])
     elif pull == "four star":
+        screen.blit(rarity_4_bg, coordinates[index])
         screen.blit(random.choice(four_star), coordinates[index])
     elif pull == "three star":
+        screen.blit(rarity_3_bg, coordinates[index])
         screen.blit(random.choice(three_star), coordinates[index])
     else:
         print(f"{pull} is not valid.")
