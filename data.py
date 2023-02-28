@@ -46,7 +46,7 @@ four_star = [Barbara]
 three_star = [Ebony_Bow, Messenger, Raven_Bow, Recurve_Bow, Sharpshooters_Oath, Slingshot]
 
 # creates list of 5 random rarity-options from the rarity list
-pulls = random.choices(rarity, weights=(0, 10, 90), k=5)
+pulls = random.choices(rarity, weights=(0, 50, 50), k=5)
 
 
 # list of card coordinates
